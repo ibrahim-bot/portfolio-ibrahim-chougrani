@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr" data-theme="auto">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Ibrahim Chougrani — Développeur(Portfolio)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Portfolio Ibrahim Chougrani : verre liquide, flou dynamique, reflets animés, bokeh et profondeur." />
+</head>
+<body>
+  <!-- Decorative / depth layers -->
+  <div class="bg" aria-hidden="true"></div>
+  <div class="bokeh" aria-hidden="true"></div>
+  <canvas id="matrixCanvas" aria-hidden="true"></canvas>
+  <div class="glass-lights" aria-hidden="true"></div>
+
+  <header class="nav glass" role="banner">
+    <a class="brand" href="#home" aria-label="Accueil">
+      <span class="brand-dot"></span>
+      <span class="brand-text">Ibrahim Chougrani</span>
+    </a>
+    <nav class="nav-links" role="navigation" aria-label="Navigation principale">
+      <a href="#projects">Projets</a>
+      <a href="#about">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Basculer le thème">
+        <span class="icon"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="home" class="container" role="main">
+    <section class="hero card glass parallax-tilt">
+      <p class="eyebrow">Analyste développeur — Lyon, France</p>
+      <h1 class="display">Bonjour, je suis <span class="accent">Ibrahim Chougrani</span></h1>
+      <p class="subtitle">CRÉATION SITE WEB (VITRINE) | Webmaster | Développeur IT | Concepteur site Web | Référencement naturel </p>
+      <ul class="chips">
+        <li class="glass-sheen">VB.NET</li>
+        <li class="glass-sheen">C#</li>
+        <li class="glass-sheen">API REST</li>
+        <li class="glass-sheen">SQL</li>
+        <li class="glass-sheen">JS/TS</li>
+      </ul>
+      <div class="cta">
+        <a class="btn glass-sheen" href="#projects">Voir mes projets</a>
+        <a class="btn btn-primary glass-sheen" target="_blank" href="img/CV_Ibrahim_Chougrani.pdf">Télécharger mon CV</a>
+        <a class="btn glass-sheen" href="#contact">Me contacter</a>
+      </div>
+    </section>
+ 
+    <section id="projects" class="section">
+      <h2 class="section-title">Projets</h2>
+      <div class="grid">
+        
+        <article class="card project glass parallax-tilt">
+          <div class="project-head">
+            <div class="glyph" aria-hidden="true">💎</div>
+            <h3>Synchro Electre</h3>
+          </div>
+          <p>Service de synchronisation vers un système externe avec gestion des erreurs et reprise. Exposé via API RestSharp (VB.NET).</p>
+          <div class="tags"><span class="glass-sheen">VB.NET</span><span class="glass-sheen">RestSharp</span><span class="glass-sheen">SQL</span></div>
+          <a class="chip glass-sheen" href="#" target="_blank" rel="noopener">Voir le code</a>
+        </article>
+
+        <article class="card project glass parallax-tilt">
+          <div class="project-head">
+            <div class="glyph" aria-hidden="true">📦</div>
+            <h3>Auto étiquettes</h3>
+          </div>
+          <p>Génération d’étiquettes Avery Dennison depuis une appli desktop avec gabarits dynamiques et impression en lot.</p>
+          <div class="tags"><span class="glass-sheen">C#</span><span class="glass-sheen">Impression</span><span class="glass-sheen">WPF</span></div>
+          <a class="chip glass-sheen" href="#" target="_blank" rel="noopener">Étude de cas</a>
+        </article>
+
+        <article class="card project glass parallax-tilt">
+          <div class="project-head">
+            <div class="glyph" aria-hidden="true">🛰️</div>
+            <h3>Last Constellations</h3>
+          </div>
+          <p>Prototype narratif d’un jeu solo post‑apo avec UI minimaliste et transitions fluides façon iOS.</p>
+          <div class="tags"><span class="glass-sheen">Unity</span><span class="glass-sheen">C#</span><span class="glass-sheen">UX</span></div>
+          <a class="chip glass-sheen" href="#" target="_blank" rel="noopener">Prototype</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2 class="section-title">À propos</h2>
+      <div class="card about-card glass parallax-tilt">
+        <p>
+          Développeur informatique basé à Lyon, je conçois des solutions logicielles et web
+          alliant performance, fiabilité et design. Après plusieurs années entre freelancing
+          et développement industriel, j’ai acquis une vision complète du cycle de vie
+          d’une application — de la conception à la mise en production.
+        </p>
+        <ul class="list">
+          <li>Expérience en C#, .NET, LINQ, React, JavaScript et bases de données (MySQL, PostgreSQL, SQL Server).</li>
+          <li>Approche orientée qualité : documentation claire, optimisation des performances, tests et maintenance continue.</li>
+          <li>Esprit d’équipe, curieux et adaptable — j’aime apprendre, collaborer et repousser les limites techniques.</li>
+          <li>Actuellement chez <strong>Socara</strong>, où je développe et améliore des applications métiers à fort impact.</li>
+          <li>En parallèle, je crée des sites et applications modernes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 class="section-title">Contact</h2>
+      <form id="contactForm" class="card form glass parallax-tilt" novalidate>
+        <div class="field">
+          <label for="email">Votre email</label>
+          <input id="email" name="email" type="email" placeholder="vous@exemple.com" required />
+          <span class="hint">Obligatoire</span>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Dites-m’en plus…" required></textarea>
+          <span class="hint">Obligatoire</span>
+        </div>
+        <button class="btn btn-primary glass-sheen" type="submit">Envoyer</button>
+        <p id="formNote" class="form-note" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Ibrahim Chougrani — <a href="https://www.linkedin.com/in/ibrahim-chougrani" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/ibrahim-bot" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
