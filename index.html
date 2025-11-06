@@ -6,13 +6,11 @@
   <meta name="color-scheme" content="light dark" />
   <title>Ibrahim Chougrani — Développeur(Portfolio)</title>
   <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Portfolio Ibrahim Chougrani : Design IOS" />
+  <meta name="description" content="Portfolio Ibrahim Chougrani : Design" />
 </head>
 <body>
   <!-- Decorative / depth layers -->
-  <div class="bg" aria-hidden="true"></div>
   <div class="bokeh" aria-hidden="true"></div>
-  <canvas id="matrixCanvas" aria-hidden="true"></canvas>
   <div class="glass-lights" aria-hidden="true"></div>
 
   <header class="nav glass" role="banner">
@@ -20,11 +18,7 @@
       <span class="brand-dot"></span>
       <span class="brand-text">Ibrahim Chougrani</span>
     </a>
-    <nav class="nav-links" role="navigation" aria-label="Navigation principale">
-      <a href="#projects">Projets</a>
-      <a href="#about">À propos</a>
-      <a href="#contact">Contact</a>
-    </nav>
+
     <div class="nav-actions">
       <button id="themeToggle" class="icon-btn" aria-label="Basculer le thème">
         <span class="icon"></span>
@@ -106,26 +100,70 @@
           <li>Actuellement chez <strong>Socara</strong>, où je développe et améliore des applications métiers à fort impact.</li>
           <li>En parallèle, je crée des sites et applications modernes.</li>
         </ul>
+        <div class="cta social-btns" style="margin-top: 20px; flex-wrap: wrap; justify-content: center;">
+      <a class="btn glass-sheen insta" href="https://www.instagram.com/ton_instagram" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" />
+        Instagram
+      </a>
+      <a class="btn glass-sheen tiktok" href="https://www.tiktok.com/@ton_tiktok" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" />
+        TikTok
+      </a>
+    </div>
       </div>
     </section>
 
     <section id="contact" class="section">
       <h2 class="section-title">Contact</h2>
-      <form id="contactForm" class="card form glass parallax-tilt" novalidate>
+      <form name="contact" method="POST" data-netlify="true" class="card glass parallax-tilt">
+        <p>
+          Tu as un projet, une idée ou besoin d’un site ? ✨  
+          N’hésite pas à me laisser un message, je te répondrai rapidement.
+        </p>
+
+        <input type="hidden" name="form-name" value="contact" />
+
         <div class="field">
-          <label for="email">Votre email</label>
-          <input id="email" name="email" type="email" placeholder="vous@exemple.com" required />
-          <span class="hint">Obligatoire</span>
+          <label for="name">Nom</label>
+          <input id="name" name="name" type="text" placeholder="Ton nom" required />
         </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="ton@email.com" required />
+        </div>
+
         <div class="field">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" placeholder="Dites-m’en plus…" required></textarea>
-          <span class="hint">Obligatoire</span>
+          <textarea id="message" name="message" rows="4" placeholder="Décris ton projet ou ta demande..." required></textarea>
         </div>
-        <button class="btn btn-primary glass-sheen" type="submit">Envoyer</button>
-        <p id="formNote" class="form-note" aria-live="polite"></p>
-      </form>
-    </section>
+
+        <div class="cta">
+      <button class="btn btn-primary glass-sheen" type="submit">
+        <span>📩</span> Envoyer le message
+      </button>
+      <a class="btn glass-sheen" href="mailto:ibrahim.chougrani1@gmail.com" target="_blank" rel="noopener">
+        <span>💬</span> M’écrire directement
+      </a>
+    </div>
+
+    <ul class="list" style="margin-top: 18px;">
+      <li>📧 <a href="mailto:ibrahim.chougrani1@gmail.com" target="_blank" rel="noopener"> ibrahim.chougrani1@gmail.com </a></li>
+      <li>🌍 Lyon, France</li>
+    </ul>
+
+    <div class="cta social-btns" style="margin-top: 20px; flex-wrap: wrap; justify-content: center;">
+      <a class="btn glass-sheen" href="https://www.linkedin.com/in/ibrahim-chougrani" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />
+        LinkedIn
+      </a>
+      <a class="btn glass-sheen" href="https://github.com/ibrahim-bot" target="_blank" rel="noopener">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />
+        GitHub
+      </a>
+    </div>
+  </form>
+</section>
   </main>
 
   <footer class="footer">
