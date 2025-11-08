@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Merci — Ibrahim Chougrani</title>
+  <meta name="color-scheme" content="light dark" />
+  <link rel="stylesheet" href="styles.css" />
+
+
+  <meta http-equiv="refresh" content="5; url=/" />
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .merci-card {
+      border: 1px solid var(--stroke);
+      background: color-mix(in oklab, var(--glass) 92%, transparent);
+      backdrop-filter: blur(18px) saturate(1.4);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 40px 50px;
+      max-width: 480px;
+      width: 90%;
+      animation: fadeIn .8s ease;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: var(--accent);
+    }
+    p {
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
+    .btn {
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 999px;
+      border: 1px solid var(--stroke);
+      background: color-mix(in oklab, var(--glass) 92%, transparent);
+      font-weight: 600;
+      transition: all .2s ease;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 22px rgba(0,0,0,.08);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="merci-card glass">
+    <h1>Merci 🙏</h1>
+    <p>Ton message a bien été envoyé.<br>Je te répondrai très bientôt.</p>
+    <a href="/" class="btn glass-sheen">Retour au portfolio</a>
+    <p style="margin-top:20px; font-size:.9rem; color:var(--muted);">
+      Redirection automatique dans 5 secondes...
+    </p>
+  </div>
+</body>
+</html>
