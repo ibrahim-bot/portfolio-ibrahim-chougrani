@@ -1,11 +1,3 @@
-// Liquid Glass++ interactions
-// - Theme toggle with persistence and system default
-// - Smooth scroll for anchor links
-// - Contact form demo feedback
-// - Dynamic scroll blur & hover sheen intensity
-// - Parallax tilt on cards
-// - Matrix rain background (left/right tint) with visibility pause
-
 (function () {
   const root = document.documentElement;
   const btn = document.getElementById('themeToggle');
@@ -13,7 +5,6 @@
 
   if (year) year.textContent = new Date().getFullYear();
 
-  // Theme
   const stored = localStorage.getItem('theme');
   if (stored === 'dark' || stored === 'light') {
     root.dataset.theme = stored;
@@ -34,7 +25,6 @@
   });
   observer.observe(root, { attributes: true, attributeFilter: ['data-theme'] });
 
-  // Smooth scroll for internal links
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', (e) => {
       const id = a.getAttribute('href').slice(1);
